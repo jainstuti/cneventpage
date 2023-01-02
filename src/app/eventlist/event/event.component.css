@@ -1,0 +1,22 @@
+.card{
+    display: inline-block;
+    margin: 10px;
+}
+
+.light{
+    color: grey;
+    font-weight: lighter;
+}
+
+.detail{
+    margin-right: 30px;
+}
+
+.tags{
+    background-color: rgb(197, 193, 193);
+    padding: 4px;
+    margin: 2px;
+    margin-bottom: 4px;
+    /* border-radius: 2px; */
+}
+

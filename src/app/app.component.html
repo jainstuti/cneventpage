@@ -55,7 +55,7 @@
 <label for="radio-worshop">Workshop</label>
 </div>
 </div>
-
+<br />  
 <div class="row">
   <div class="col">
 <input
@@ -91,13 +91,20 @@
 <label for="radio-favourites">All time Favorites</label>
 </div>
 </div>
-
-
+<br/>
+<div class="row pagination">
+  <div class="col">
+<button (click)="changeToPrev($event)">Prev</button>{{ i + 1 }}
+<button (click)="changeToNext($event)">Next</button>
+</div>
+</div>
+<br/>
 <div class="row">
-  <div class="col-9">
+  <div class="col-md-9 col-sm-12">
   <app-eventlist [filteredEventsList]="singlePageEvents"></app-eventlist>
 </div>
-<div class="col-3">
+
+<div class="col-md-3 col-sm-12">
 <h3 class="tags" >Tags</h3>
 <div class="tags" *ngFor="let tag of allTagsList">
   <input id="checkbox-{{tag}}" type="checkbox" [name]="tag" (click)="updateTags(tag)" />
@@ -106,10 +113,5 @@
 </div>
 
 </div>
-<div class="row">
-  <div class="col">
-<button (click)="changeToPrev($event)">Prev</button>{{ i + 1 }}
-<button (click)="changeToNext($event)">Next</button>
-</div>
-</div>
+
 </div>

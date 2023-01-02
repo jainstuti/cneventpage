@@ -73,8 +73,8 @@ export class AppComponent {
         this.filteredEvents=Response
         this.filteredEventsList=this.filteredEvents.data.events
         this.i=0
-        this.singlePageEvents=this.filteredEventsList.slice(this.i*2, Math.min(this.filteredEventsList.length, this.i*2+2))
-        // console.log(this.filteredEventsList);
+        this.singlePageEvents=this.filteredEventsList.slice(this.i*20, Math.min(this.filteredEventsList.length, this.i*20+20))
+        console.log(this.singlePageEvents);
       }
       // console.log(Response)
       // this.li=Response;
@@ -85,13 +85,13 @@ export class AppComponent {
   this.changeToPrev=()=>{
     if(this.i>0){
       this.i--;
-    this.singlePageEvents=this.filteredEventsList.slice(this.i*2, Math.min(this.filteredEventsList.length, this.i*2+2))
+    this.singlePageEvents=this.filteredEventsList.slice(this.i*20, Math.min(this.filteredEventsList.length, this.i*20+20))
     }
   }
   this.changeToNext=()=>{
-    if(this.i*2<this.filteredEventsList.length){
+    if(this.i*20+20<this.filteredEventsList.length){
       this.i++;
-    this.singlePageEvents=this.filteredEventsList.slice(this.i*2, Math.min(this.filteredEventsList.length, this.i*2+2))
+    this.singlePageEvents=this.filteredEventsList.slice(this.i*20, Math.min(this.filteredEventsList.length, this.i*20+20))
     }
     
   }
